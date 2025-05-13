@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@theme {
+
+  --color-light-red: oklch(69.62% 0.1942 23.61);
+  --color-white-smoke: oklch(97.31% 0 0);
+  --color-white: oklch(100% 0 0);
+
+  --color-footer: oklch(0% 0 0);
+  --color-images: oklch(0% 0 0 / 30.2%);
+  --color-cards: (180deg, oklch(100% 0 0 / 0%) 0%, oklch(0% 0 0 / 50%), 100%);
+
+  --font-text: "Montserrat", sans-serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+.nav-active {
+  display: flex;
+  text-decoration: underline;
+  color: oklch(69.62% 0.1942 23.61);
+}
+
+/* @media only screen and (max-width: 550px) {
+  .home_banner {
+    height: 111px;
+  }
+} */
+
+.arrow_up {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 550px) {
+  .arrow_up {
+    width: 16px;
+    height: 9px;
+  }
+}
+
+.arrow_down {
+  transform: rotate(0deg);
+}
+
+@media only screen and (max-width: 550px) {
+  .arrow_down {
+    width: 16px;
+    height: 9px;
+  }
+}
+
+.collapse_content {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 12px;
+  background-color: oklch(97.31% 0 0);
+  color: oklch(69.62% 0.1942 23.61);
+  padding:  15px 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 550px) {
+  .collapse_content {
+    font-size: 24px;
+    padding: 25px 18px;
+    margin-bottom: 31px;
+  }
+}
+
+.collapse_content_hidden {
+  height: 20px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 550px) {
+  .collapse_content_hidden {
+    height: 20px;
+  }
+}
